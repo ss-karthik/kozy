@@ -7,6 +7,11 @@ for(let i=0; i<14; i++)
 {
     audio[i] = new Audio();
     audio[i].src = `sounds/${i}.ogg`;
+    /*audio[i].preload = 'auto';
+    audio[i].addEventListener('error', (e) => {
+        console.error(`Error loading audio ${i}:`, e);
+    });*/
+
 }
 
 audiobtn.addEventListener('click', () => {
@@ -14,8 +19,9 @@ audiobtn.addEventListener('click', () => {
         playing = true;
         for(let i=0; i<14; i++)
         {
-            audio[i].volume = 0;
-            audio[i].play();
+            let id = i+1;
+            let currentvol = document.getElementById(id).value;
+            changevol(currentvol,id);
         }
         audiobtn.innerHTML = `<i class="bi bi-stop-circle-fill"></i>`;
     } else {
@@ -29,5 +35,14 @@ audiobtn.addEventListener('click', () => {
 });
 
 function changevol(currentvol, id) {
-    audio[id-1].volume = currentvol;
+    if(playing)
+    {
+        if(currentvol==0)
+            audio[id-1].pause();
+        else{
+            if(audio[id-1].paused)
+                audio[id-1].play();
+            audio[id-1].volume = currentvol;
+        }
+    }
 }
