@@ -7,68 +7,85 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Kozy</title>
 </head>
-<body class="flex flex-col items-center gap-4 px-4">
-    <h1 class="text-5xl py-4">Kozy</h1>
-    <h1 class="text-3xl text-center">Listen to sounds. Calm down. And get s**t done.</h1>
-    <button class="audiobtn text-3xl"><i class="bi bi-play-circle-fill"></i></button>
+<body class="flex flex-col items-center gap-4 px-4 dark:bg-black">
+    <h1 class="text-5xl py-4 dark:text-white">Kozy</h1>
+    <h1 class="text-3xl text-center dark:text-white">Listen to sounds. Calm down. And get s**t done.</h1>
+    <div class="flex justify-center gap-5">
+    <button class="audiobtn text-3xl dark:text-white"><i class="bi bi-play-circle-fill"></i></button>
+    <button class="toggle text-3xl dark:text-white" id="btn"><i class="bi bi-circle-half"></i></button>
+    </div>
     <div class="flex justify-center flex-wrap gap-10">
-        <div class="border w-60 border-black rounded-md flex flex-col items-center px-4 py-2">
-            <h1 class="text-3xl text-center">Birds</h1>
+        <div class="border w-60 border-black rounded-md flex flex-col items-center px-4 py-2 dark:border-white">
+            <h1 class="text-3xl text-center dark:text-white">Birds</h1>
             <input id="1" type="range"  max="1" min="0" value="0" step="0.1" onchange="changevol(this.value, this.id)">
         </div>
-        <div class="border w-60 border-black rounded-md flex flex-col items-center px-4 py-2">
-            <h1 class="text-3xl text-center">Boat</h1>
+        <div class="border w-60 border-black rounded-md flex flex-col items-center px-4 py-2 dark:border-white">
+            <h1 class="text-3xl text-center dark:text-white">Boat</h1>
             <input id="2" type="range" max="1" min="0" value="0" step="0.1" onchange="changevol(this.value, this.id)">
         </div>
-        <div class="border w-60 border-black rounded-md flex flex-col items-center px-4 py-2">
-            <h1 class="text-3xl text-center">City</h1>
+        <div class="border w-60 border-black rounded-md flex flex-col items-center px-4 py-2 dark:border-white">
+            <h1 class="text-3xl text-center dark:text-white">City</h1>
             <input id="3" type="range" max="1" min="0" value="0" step="0.1" onchange="changevol(this.value, this.id)">
         </div>
-        <div class="border w-60 border-black rounded-md flex flex-col items-center px-4 py-2">
-            <h1 class="text-3xl text-center">Coffee Shop</h1>
+        <div class="border w-60 border-black rounded-md flex flex-col items-center px-4 py-2 dark:border-white">
+            <h1 class="text-3xl text-center dark:text-white">Coffee Shop</h1>
             <input id="4" type="range" max="1" min="0" value="0" step="0.1" onchange="changevol(this.value, this.id)">
         </div>
-        <div class="border w-60 border-black rounded-md flex flex-col items-center px-4 py-2">
-            <h1 class="text-3xl text-center">Fireplace</h1>
+        <div class="border w-60 border-black rounded-md flex flex-col items-center px-4 py-2 dark:border-white">
+            <h1 class="text-3xl text-center dark:text-white">Fireplace</h1>
             <input id="5" type="range" max="1" min="0" value="0" step="0.1" onchange="changevol(this.value, this.id)">
         </div>
-        <div class="border w-60 border-black rounded-md flex flex-col items-center px-4 py-2">
-            <h1 class="text-3xl text-center">Pink Noise</h1>
+        <div class="border w-60 border-black rounded-md flex flex-col items-center px-4 py-2 dark:border-white">
+            <h1 class="text-3xl text-center dark:text-white">Pink Noise</h1>
             <input id="6" type="range" max="1" min="0" value="0" step="0.1" onchange="changevol(this.value, this.id)">
         </div>
-        <div class="border w-60 border-black rounded-md flex flex-col items-center px-4 py-2">
-            <h1 class="text-3xl text-center">Rain</h1>
+        <div class="border w-60 border-black rounded-md flex flex-col items-center px-4 py-2 dark:border-white">
+            <h1 class="text-3xl text-center dark:text-white">Rain</h1>
             <input id="7" type="range" max="1" min="0" value="0" step="0.1" onchange="changevol(this.value, this.id)">
         </div>
-        <div class="border w-60 border-black rounded-md flex flex-col items-center px-4 py-2">
-            <h1 class="text-3xl text-center">Storm</h1>
+        <div class="border w-60 border-black rounded-md flex flex-col items-center px-4 py-2 dark:border-white">
+            <h1 class="text-3xl text-center dark:text-white">Storm</h1>
             <input id="8" type="range" max="1" min="0" value="0" step="0.1" onchange="changevol(this.value, this.id)">
         </div>
-        <div class="border w-60 border-black rounded-md flex flex-col items-center px-4 py-2">
-            <h1 class="text-3xl text-center">Stream</h1>
+        <div class="border w-60 border-black rounded-md flex flex-col items-center px-4 py-2 dark:border-white">
+            <h1 class="text-3xl text-center dark:text-white">Stream</h1>
             <input id="9" type="range" max="1" min="0" value="0" step="0.1" onchange="changevol(this.value, this.id)">
         </div>
-        <div class="border w-60 border-black rounded-md flex flex-col items-center px-4 py-2">
-            <h1 class="text-3xl text-center">Summer Night</h1>
+        <div class="border w-60 border-black rounded-md flex flex-col items-center px-4 py-2 dark:border-white">
+            <h1 class="text-3xl text-center dark:text-white">Summer Night</h1>
             <input id="10" type="range" max="1" min="0" value="0" step="0.1" onchange="changevol(this.value, this.id)">
         </div>
-        <div class="border w-60 border-black rounded-md flex flex-col items-center px-4 py-2">
-            <h1 class="text-3xl text-center">Train</h1>
+        <div class="border w-60 border-black rounded-md flex flex-col items-center px-4 py-2 dark:border-white">
+            <h1 class="text-3xl text-center dark:text-white">Train</h1>
             <input id="11" type="range" max="1" min="0" value="0" step="0.1" onchange="changevol(this.value, this.id)">
         </div>
-        <div class="border w-60 border-black rounded-md flex flex-col items-center px-4 py-2">
-            <h1 class="text-3xl text-center">Waves</h1>
+        <div class="border w-60 border-black rounded-md flex flex-col items-center px-4 py-2 dark:border-white">
+            <h1 class="text-3xl text-center dark:text-white">Waves</h1>
             <input id="12" type="range" max="1" min="0" value="0" step="0.1" onchange="changevol(this.value, this.id)">
         </div>
-        <div class="border w-60 border-black rounded-md flex flex-col items-center px-4 py-2">
-            <h1 class="text-3xl text-center">White Noise</h1>
+        <div class="border w-60 border-black rounded-md flex flex-col items-center px-4 py-2 dark:border-white">
+            <h1 class="text-3xl text-center dark:text-white">White Noise</h1>
             <input id="13" type="range" max="1" min="0" value="0" step="0.1" onchange="changevol(this.value, this.id)">
         </div>
-        <div class="border w-60 border-black rounded-md flex flex-col items-center px-4 py-2">
-            <h1 class="text-3xl text-center">Wind</h1>
+        <div class="border w-60 border-black rounded-md flex flex-col items-center px-4 py-2 dark:border-white">
+            <h1 class="text-3xl text-center dark:text-white">Wind</h1>
             <input id="14" type="range" max="1" min="0" value="0" step="0.1" onchange="changevol(this.value, this.id)">
         </div>
     </div>
+    <div class="text-xl p-4 dark:text-white">A <a class="underline" href="https://github.com/ss-karthik/kozy" target="_blank" rel="noopener noreferrer">Maniak</a> Creation!</div>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class', 
+            theme: {
+                extend: {},
+            },
+            variants: {
+                extend: {},
+            },
+            plugins: [],
+        };
+    </script>
     <script src="script.js"></script>
 </body>
 </html>

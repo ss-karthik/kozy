@@ -1,17 +1,22 @@
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+  document.documentElement.classList.add(savedTheme);
+} else {
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if (prefersDark) {
+    document.documentElement.classList.add('dark');
+  }
+}
+
+
 let playing = false;
 let audiobtn = document.querySelector(".audiobtn");
 
 let audio = [];
-//audio[0] = new Audio();
 for(let i=0; i<14; i++)
 {
     audio[i] = new Audio();
     audio[i].src = `sounds/${i}.ogg`;
-    /*audio[i].preload = 'auto';
-    audio[i].addEventListener('error', (e) => {
-        console.error(`Error loading audio ${i}:`, e);
-    });*/
-
 }
 
 audiobtn.addEventListener('click', () => {
@@ -46,3 +51,18 @@ function changevol(currentvol, id) {
         }
     }
 }
+
+const toggleDarkMode = () => {
+    document.documentElement.classList.toggle('dark');
+    if (document.documentElement.classList.contains('dark')) {
+      localStorage.setItem('theme', 'dark');
+    } else {
+      localStorage.setItem('theme', 'light');
+    }
+  };
+
+const btn = document.getElementById('btn');
+btn.onclick = toggleDarkMode;
+
+
+
