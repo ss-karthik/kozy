@@ -16,6 +16,7 @@ let audio = [];
 for(let i=0; i<14; i++)
 {
     audio[i] = new Audio();
+    audio[i].loop = true;
     audio[i].src = `sounds/${i}.ogg`;
 }
 
