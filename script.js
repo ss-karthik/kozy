@@ -115,7 +115,7 @@ function onPlayerReady(){
             custAudioBtn.innerHTML = `<i class="bi bi-stop-circle-fill"></i>`;
         } else {
             customPlaying = false;
-            player.stopVideo();
+            player.pauseVideo();
             custAudioBtn.innerHTML = `<i class="bi bi-play-circle-fill"></i>`;
         }
     });
